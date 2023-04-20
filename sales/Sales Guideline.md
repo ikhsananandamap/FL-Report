@@ -33,3 +33,4 @@ genarticle_loc = data_sku_product.index[data_sku_product['Gen.art (PH)']==data_r
 ```
 6. Run the script through Runtime > Run All
 7. Download the results file
+8. The output file of the program has deleted rows of data with a total sales quantity of 0 
