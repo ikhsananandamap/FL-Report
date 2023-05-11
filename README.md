@@ -3,3 +3,4 @@
 - See the guidelines for the stock report [Here](https://github.com/ikhsananandamap/FL-Report/blob/main/stock/Stock%20Guideline.md)
 - See the guidelines for the incoming report [Here](https://github.com/ikhsananandamap/FL-Report/blob/main/incoming/Incoming%20Guideline.md)
 - See the guidelines for the brand report [Here](https://github.com/ikhsananandamap/FL-Report/blob/main/brand/Brand%20Guidelines.md)
+- See the guidelines for the incoming check [Here](https://github.com/ikhsananandamap/FL-Report/blob/main/incoming_check/Incoming%20Check%20Guidelines.md)
