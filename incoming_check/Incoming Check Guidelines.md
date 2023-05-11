@@ -1,36 +1,19 @@
-1. Adjust the template between sales raw data and SKU. **Note: One file for one country**
-2. **Make a copy** the script to your Google Drive [Sales Report](https://colab.research.google.com/drive/1AtVvT0af-VlrxdxtPxPp1KJrIuZ44xj8?usp=sharing)
+1. Adjust the template of buying plan. **Note: One file for one season except 2022**
+2. **Make a copy** the script to your Google Drive [Incoming Check](https://colab.research.google.com/drive/1uBd4D0JV7SJ6nk4_YUU1REzP3RCDyuBe?usp=sharing)
 3. Upload your file to Google Colaboratory
-4. Adust the name of your Sales and SKU Files
+4. Adust the name of your Buying Plan
 ```python
-#Import Data
-data_raw = pd.read_excel('Sales 150423.xlsx', sheet_name='RAW')
-data_sku_product = pd.read_excel('SKU.xlsx', sheet_name='Product')
-data_sku_sales = pd.read_excel('SKU.xlsx', sheet_name='Sales')
-data_sku_inventory = pd.read_excel('SKU.xlsx', sheet_name='Inventory')
-
-#Export Data
-data_final.to_excel("Hasil Sales 150423.xlsx", sheet_name = 'FINAL')
+#Read All Data
+buying_plan_fw_fw_2023 = pd.read_excel('Buying Plan FW23 Footwear Python.xlsx', sheet_name='Sheet1')
+buying_plan_fw_app_2023 = pd.read_excel('Buying Plan FW23 App Accs Python.xlsx', sheet_name='Sheet1')
+buying_plan_ss_fw_2023 = pd.read_excel('Buying Plan SS23 Footwear Python.xlsx', sheet_name='Sheet1')
+buying_plan_ss_app_2023 = pd.read_excel('Buying Plan SS23 App Accs Python.xlsx', sheet_name='Sheet1')
+buying_plan_ss_2022 = pd.read_excel('Buying Plan SS22 Python.xlsx', sheet_name='Sheet1')
+buying_plan_fw_2022 = pd.read_excel('Buying Plan FW22 Python.xlsx', sheet_name='Sheet1')
 ```
-5. Adjust the Gen.Art based on the selected country
-If you want to make a report from Indonesian data you need to untag the FL Indonesia like this : 
-```python
-#Division to Color
-#FL Indonesia
-genarticle_loc = data_sku_product.index[data_sku_product['Gen.art']==data_raw['Genarticle'][i]].tolist()
-  
-#FL Philippines
-# genarticle_loc = data_sku_product.index[data_sku_product['Gen.art (PH)']==data_raw['Genarticle'][i]].tolist()
-```
-If you want to make a report from Philippines data you need to untag the FL Philippines like this : 
-```python
-#Division to Color
-#FL Indonesia
-#genarticle_loc = data_sku_product.index[data_sku_product['Gen.art']==data_raw['Genarticle'][i]].tolist()
-  
-#FL Philippines
-genarticle_loc = data_sku_product.index[data_sku_product['Gen.art (PH)']==data_raw['Genarticle'][i]].tolist()
-```
-6. Run the script through Runtime > Run All
-7. Download the results file
-8. The output file of the program has deleted rows of data with a total sales quantity of 0 
+5. Steps to run the script : 
+- Run the "Run This" Section
+- After that, if the current season is Spring Summer, just run the "Season SS" and "HAD Files" Section
+- if the current season is Fall Winter, just run the "Season FW" and "HAD Files" Section
+6. Download the results file
+7. The output file of the program has deleted rows of Canceled, TBA, #N/A inside Updated column and Blanks from MAP Brand column
